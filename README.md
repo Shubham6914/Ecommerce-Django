@@ -6,10 +6,6 @@ This project is currently under development. Excuse our appearance as we're acti
 
 ## Project Overview
 
-## Project Overview
-
-## Project Overview
-
 Welcome to [Ecommerce-Website]! This website is designed to offer a comprehensive set of features to enhance user experience and security. Here's an overview of the key functionalities:
 
 ### User Authentication and Registration
