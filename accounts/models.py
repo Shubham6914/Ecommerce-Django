@@ -19,7 +19,7 @@ class MyaccountManager(BaseUserManager):
       )
 
       user.set_password(password)  # for setting the password we used set.password here
-      user.is_active = True
+      user.is_active = False
       user.is_staff = True
       user.save(using = self.db)
       return user
@@ -42,7 +42,7 @@ class MyaccountManager(BaseUserManager):
       return user
 
 
-class Account(AbstractBaseUser): #creating base user
+class Account(AbstractBaseUser,): #creating base user
    first_name   = models.CharField(max_length=50)
    last_name    = models.CharField(max_length=50)
    username     = models.CharField(max_length=50,unique=True)
