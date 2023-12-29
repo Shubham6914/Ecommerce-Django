@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'accounts',
     'store',
     'carts',
+    'orders',
     
 ]
 
@@ -151,3 +152,5 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'shubhee1021@gmail.com'
 EMAIL_HOST_PASSWORD = 'eatq edae kmgv iktk'
 EMAIL_USE_TLS = True
+
+

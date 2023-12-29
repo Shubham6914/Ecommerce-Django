@@ -12,6 +12,7 @@ from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import EmailMessage
 from carts.models import Cart,CartItem
 from carts.views import _cart_id
+from django.contrib.auth import authenticate, login as auth_login
 import requests
 # Create your views here.
 
@@ -33,7 +34,7 @@ def register(request):
          # USER ACTIVATION 
          
          current_site = get_current_site(request) 
-         mail_subject = 'Please activare your account'
+         mail_subject = 'Please activate your account'
          message = render_to_string('accounts/account_verification_email.html',{
             'user': user,
             'domain': current_site,
@@ -55,8 +56,6 @@ def register(request):
       'form':form,
    }
    return render(request,'accounts/register.html',context)
-
-
 
 def login(request):
    if request.method == 'POST':
