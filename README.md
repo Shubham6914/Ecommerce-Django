@@ -1,8 +1,5 @@
 # Project Name (Ecommerce-Website)
-
-## 🚧 Work in Progress
-
-This project is currently under development. Excuse our appearance as we're actively working on making improvements.
+The E-commerce Website project is a comprehensive online shopping platform designed to provide users with a seamless and secure shopping experience. This project incorporates various features and functionalities, making it a robust and user-friendly platform for both customers and administrators.
 
 ## Project Overview
 
