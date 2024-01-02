@@ -85,6 +85,17 @@
 								>
 								<div class="price mt-1">${{product.price}}</div>
 								<!-- price-wrap.// -->
+								<div class="rating-star">
+									<!--printing average star in review form -->
+									<span>
+										<i class="fa fa-star{% if single_product.averageRating < 0.5 %}-o {% elif single_product.averageRating >= 0.5 and single_product.averageRating < 1 %}-half-o {% endif %}" aria-hidden="true"></i>
+										<i class="fa fa-star{% if single_product.averageRating < 1.5 %}-o {% elif single_product.averageRating >= 1.5 and single_product.averageRating < 2 %}-half-o {% endif %}" aria-hidden="true"></i>
+										<i class="fa fa-star{% if single_product.averageRating < 2.5 %}-o {% elif single_product.averageRating >= 2.5 and single_product.averageRating < 3 %}-half-o {% endif %}" aria-hidden="true"></i>
+										<i class="fa fa-star{% if single_product.averageRating < 3.5 %}-o {% elif single_product.averageRating >= 3.5 and single_product.averageRating < 4 %}-half-o {% endif %}" aria-hidden="true"></i>
+										<i class="fa fa-star{% if single_product.averageRating < 4.5 %}-o {% elif single_product.averageRating >= 4.5 and single_product.averageRating < 5 %}-half-o {% endif %}" aria-hidden="true"></i>
+										
+									</span>
+								</div>
 							</figcaption>
 						</div>
 					</div>

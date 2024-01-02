@@ -18,11 +18,18 @@
 			<div class="row no-gutters">
 				<aside class="col-md-6">
 					<article class="gallery-wrap">
-						<div class="img-big-wrap">
-							<a href="#"><img src="{{single_product.images.url}}"></a>
+						<div class="img-big-wrap mainImage">
+							<img src="{{single_product.images.url}}">
 						</div> <!-- img-big-wrap.// -->
 
 					</article> <!-- gallery-wrap .end// -->
+					<!--<ul class="thumb">
+						<li>
+							{% for i in product_gallery  %}
+								<a href="{{i.image.url}}" target="mainImage"><img src="{{i.image.url}}" alt="Product Image">
+							{% endfor %}
+						</li>
+					</ul>-->
 				</aside>
 				<main class="col-md-6 border-left">
 					<form action="{% url 'add_cart' single_product.id %}" method="POST">
@@ -30,14 +37,14 @@
 						<article class="content-body">
 							<h2 class="title">{{single_product.product_name}}</h2>
 							<div class="rating-star">
-								<!--printing star in review form -->
+								<!--printing average star in review form -->
 								<span>
 									<i class="fa fa-star{% if single_product.averageRating < 0.5 %}-o {% elif single_product.averageRating >= 0.5 and single_product.averageRating < 1 %}-half-o {% endif %}" aria-hidden="true"></i>
 									<i class="fa fa-star{% if single_product.averageRating < 1.5 %}-o {% elif single_product.averageRating >= 1.5 and single_product.averageRating < 2 %}-half-o {% endif %}" aria-hidden="true"></i>
 									<i class="fa fa-star{% if single_product.averageRating < 2.5 %}-o {% elif single_product.averageRating >= 2.5 and single_product.averageRating < 3 %}-half-o {% endif %}" aria-hidden="true"></i>
 									<i class="fa fa-star{% if single_product.averageRating < 3.5 %}-o {% elif single_product.averageRating >= 3.5 and single_product.averageRating < 4 %}-half-o {% endif %}" aria-hidden="true"></i>
 									<i class="fa fa-star{% if single_product.averageRating < 4.5 %}-o {% elif single_product.averageRating >= 4.5 and single_product.averageRating < 5 %}-half-o {% endif %}" aria-hidden="true"></i>
-								<span> {{single_product.CountReview}} reviews </span>
+									<span> {{single_product.CountReview}} reviews </span>
 								</span>
 							</div>
 							<div class="mb-3">
@@ -89,7 +96,7 @@
 				<form action="{% url "submit_review" single_product.id %}" method="POST">
 					{% csrf_token %}
 					<h5> Write Your Review </h5>
-					{{single_product.averageRating}}
+					<!--{{single_product.averageRating}}-->
 					<div>
 						<!--rating star-->
 
