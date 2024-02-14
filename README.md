@@ -60,4 +60,3 @@ Thank you for exploring [Ecommerce-Website]! We hope you enjoy the seamless expe
 
 For inquiries, contact [Shubham] via [shubhee1021@gmail.com].
 
-Thank you for your patience as we continue to enhance this project! 🙌
